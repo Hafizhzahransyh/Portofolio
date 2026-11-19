@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenovo Indonesia | Smarter Technology for All</title>
+    <meta name="description" content="Temukan inovasi laptop Lenovo terbaik: ThinkPad, Legion, Yoga, dan IdeaPad bertenaga AI Engine+.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gambar produk pada kartu (menggantikan ikon di area visual) */
+        .product-visual .laptop-illustration { display: none; }
+        .product-visual .product-photo { width: 100%; height: 100%; object-fit: contain; padding: 14px 24px; display: block; transition: transform .3s ease; }
+        .product-card:hover .product-photo { transform: scale(1.08) rotate(-1deg); }
+        /* Foto produk pada kartu hero */
+        .hero-product img { width: 100%; max-height: 300px; object-fit: contain; display: block; filter: drop-shadow(0 24px 30px rgba(0,0,0,.55)); }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-announcement">
+        <div class="container announcement-content">
+            <span class="badge-pill">LENOVO TECH WORLD</span>
+            <p>Generasi Baru <strong>Lenovo AI PC</strong> Telah Hadir. Nikmati Cashback Spesial & Garansi 3 Tahun Lenovo Premier Support.</p>
+            <a href="#products" class="announcement-link">Lihat Promo <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Lenovo Official Red Block Logo -->
+            <a href="#" class="brand-logo" aria-label="Lenovo Home">
+                <div class="lenovo-badge">
+                    <span>Lenovo</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li class="nav-item dropdown">
+                        <a href="#products" class="nav-link">Produk <i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#products" class="dropdown-item" data-filter="thinkpad">
+                                <div class="drop-icon"><i class="fa-solid fa-briefcase"></i></div>
+                                <div>
+                                    <strong>ThinkPad Series</strong>
+                                    <span>Standar emas produktivitas bisnis & koding</span>
+                                </div>
+                            </a>
+                            <a href="#products" class="dropdown-item" data-filter="legion">
+                                <div class="drop-icon red"><i class="fa-solid fa-gamepad"></i></div>
+                                <div>
+                                    <strong>Legion Gaming</strong>
+                                    <span>Performa ekstrem bertenaga AI Coldfront</span>
+                                </div>
+                            </a>
+                            <a href="#products" class="dropdown-item" data-filter="yoga">
+                                <div class="drop-icon blue"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <div>
+                                    <strong>Yoga Premium</strong>
+                                    <span>Desain 2-in-1 fleksibel untuk kreator cerdas</span>
+                                </div>
+                            </a>
+                            <a href="#products" class="dropdown-item" data-filter="ideapad">
+                                <div class="drop-icon green"><i class="fa-solid fa-laptop"></i></div>
+                                <div>
+                                    <strong>IdeaPad</strong>
+                                    <span>Gaya hidup dinamis, ringan & efisien</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="inovasi-ai.html" class="nav-link">Inovasi AI</a></li>
+                    <li class="nav-item"><a href="pemandu-pintar.html" class="nav-link">Pemandu Pintar</a></li>
+                    <li class="nav-item"><a href="aksesoris.html" class="nav-link">Aksesoris</a></li>
+                    <li class="nav-item"><a href="layanan-garansi.html" class="nav-link">Layanan & Garansi</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions (Search, Cart, Theme, Mobile toggle) -->
+            <div class="nav-actions">
+                <button class="icon-btn search-trigger" id="search-btn" title="Cari produk">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <button class="icon-btn cart-btn" id="cart-btn" title="Keranjang belanja">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+                <a href="#" class="icon-btn account-btn" id="account-btn" title="Akun saya" aria-label="Akun saya"><i class="fa-regular fa-user"></i></a>
+                <button class="hamburger-btn" id="mobile-toggle" aria-label="Buka Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quick Search Bar Overlay -->
+        <div class="search-overlay" id="search-overlay">
+            <div class="container search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Cari ThinkPad X1, Legion Pro 7, Yoga Book 9i...">
+                <button class="close-search" id="close-search"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-grid-pattern"></div>
+        <div class="container hero-content">
+            <div class="hero-text-col">
+                <div class="hero-badge">
+                    <span class="trackpoint-dot"></span>
+                    <span>NEW ERA OF COMPUTING &bull; LENOVO AI PC</span>
+                </div>
+                <h1 class="hero-title">
+                    Smarter Technology <br>
+                    <span class="gradient-text">For Everyone.</span>
+                </h1>
+                <p class="hero-description">
+                    Mendefinisikan ulang batas performa dengan arsitektur komputasi cerdas. Dari ketahanan legendaris <strong>ThinkPad</strong> hingga kedahsyatan gaming <strong>Legion AI</strong>, ciptakan karya terhebat Anda hari ini.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="#products" class="btn btn-primary btn-lg">
+                        <span>Lihat Semua Seri</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="pemandu-pintar.html" class="btn btn-outline btn-lg">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>Pilih Sesuai Kebutuhan</span>
+                    </a>
+                </div>
+
+                <!-- Live Highlight Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>#1</h3>
+                        <p>PC Bisnis Global</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3>50+ TOPS</h3>
+                        <p>Akselerasi NPU AI</p>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <h3>MIL-SPEC</h3>
+                        <p>Uji Ketahanan Militer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual & Floating Specs -->
+            <div class="hero-visual-col">
+                <div class="laptop-card-hero">
+                    <div class="hero-tag-floating top-left">
+                        <i class="fa-solid fa-snowflake"></i>
+                        <span>Coldfront Hyper Cooling</span>
+                    </div>
+                    <div class="hero-tag-floating bottom-right">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Lenovo LA-2 AI Chip</span>
+                    </div>
+
+                    <!-- Foto produk hero -->
+                    <div class="laptop-stage hero-product">
+                        <img src="images/legion-pro-7i.png" alt="Legion Pro 7i Gen 9 AI">
+                    </div>
+
+                    <div class="device-caption">
+                        <div class="device-info">
+                            <h4>Legion Pro 7i Gen 9 AI</h4>
+                            <p>RTX&trade; 4090 16GB &bull; 16" WQXGA 240Hz &bull; Intel&reg; Core&trade; i9-14900HX</p>
+                        </div>
+                        <button class="btn btn-sm btn-primary quick-view-btn" data-id="2">Spesifikasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Ecosystem Quick Strip -->
+    <section class="brand-strip">
+        <div class="container">
+            <div class="strip-items">
+                <div class="strip-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div>
+                        <strong>Pengiriman Cepat & Aman</strong>
+                        <span>Gratis ongkir ke seluruh Indonesia</span>
+                    </div>
+                </div>
+                <div class="strip-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <div>
+                        <strong>Lenovo Premier Support</strong>
+                        <span>Bantuan teknisi resmi 24/7 on-site</span>
+                    </div>
+                </div>
+                <div class="strip-item">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                    <div>
+                        <strong>Jaminan Resmi 100%</strong>
+                        <span>Garansi resmi Lenovo Indonesia</span>
+                    </div>
+                </div>
+                <div class="strip-item">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div>
+                        <strong>Cicilan 0% Hingga 24 Bulan</strong>
+                        <span>Kemudahan metode pembayaran fleksibel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Produk TERKINI</span>
+                <h2 class="section-title">Pilih Seri Lenovo Sesuai Karakter Anda</h2>
+                <p class="section-desc">Dari workstation enterprise berkemampuan tinggi hingga mesin gaming kompetitif tanpa kompromi.</p>
+
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all">Semua Produk</button>
+                    <button class="filter-tab" data-category="thinkpad">
+                        <span class="tab-indicator thinkpad"></span> ThinkPad
+                    </button>
+                    <button class="filter-tab" data-category="legion">
+                        <span class="tab-indicator legion"></span> Legion Gaming
+                    </button>
+                    <button class="filter-tab" data-category="yoga">
+                        <span class="tab-indicator yoga"></span> Yoga Creator
+                    </button>
+                    <button class="filter-tab" data-category="ideapad">
+                        <span class="tab-indicator ideapad"></span> IdeaPad
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="product-grid">
+                <!-- Product cards rendered dynamically by JS or static fallback -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-col">
+                    <div class="lenovo-badge">
+                        <span>Lenovo</span>
+                    </div>
+                    <p class="footer-tagline">Smarter technology for all.</p>
+                    <p class="footer-desc">Lenovo adalah pemimpin teknologi global berperingkat Fortune Global 500 yang memberdayakan jutaan pengguna melalui inovasi PC, mobile, data center, dan kecerdasan buatan.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="#products">ThinkPad Laptops</a></li>
+                        <li><a href="#products">Legion Gaming PCs</a></li>
+                        <li><a href="#products">Yoga 2-in-1 Premium</a></li>
+                        <li><a href="#products">IdeaPad Everyday</a></li>
+                        <li><a href="#products">ThinkStation Workstations</a></li>
+                        <li><a href="#products">Tablet & Smart Devices</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Dukungan & Driver</h4>
+                    <ul>
+                        <li><a href="layanan-garansi.html">Download Driver Resmi</a></li>
+                        <li><a href="layanan-garansi.html">Pusat Layanan Service Center</a></li>
+                        <li><a href="layanan-garansi.html">Cek Status Servis</a></li>
+                        <li><a href="layanan-garansi.html">Garansi Premier Support</a></li>
+                        <li><a href="layanan-garansi.html">Komunitas Pengguna Lenovo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4>Tentang Lenovo</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Hubungan Investor</a></li>
+                        <li><a href="#">Keberlanjutan & ESG</a></li>
+                        <li><a href="#">Karier di Lenovo</a></li>
+                        <li><a href="#">Ruang Berita (Newsroom)</a></li>
+                        <li><a href="#">Lenovo Research</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2026 Lenovo. Hak Cipta Dilindungi Undang-Undang. Seluruh logo dan merek dagang adalah milik Lenovo Group Limited.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Privasi</a>
+                    <a href="#">Syarat Penggunaan</a>
+                    <a href="#">Kebijakan Cookie</a>
+                    <a href="#">Aksesibilitas</a>
+                    <span class="region-select"><i class="fa-solid fa-globe"></i> Indonesia (Bahasa)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Specs Modal -->
+    <div class="modal-backdrop" id="product-modal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" id="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modal-content">
+                <!-- Dynamically populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Box -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+    /* Sisipkan gambar produk ke setiap kartu yang dirender script.js */
+    (function () {
+        var palette = {
+            'flag-thinkpad': ['#e2231a', '#ff7a6b', false],
+            'flag-legion':   ['#0088ff', '#7c3aed', false],
+            'flag-yoga':     ['#d4af37', '#f59e0b', true],
+            'flag-ideapad':  ['#00c853', '#a3e635', false]
+        };
+        function laptopSVG(c1, c2, dual) {
+            var screen = dual
+                ? '<rect x="70" y="30" width="260" height="92" rx="8" fill="#0d0f14" stroke="#4b5160" stroke-width="3"/><rect x="78" y="37" width="244" height="78" rx="4" fill="url(#g)"/>' +
+                  '<rect x="70" y="126" width="260" height="92" rx="8" fill="#0d0f14" stroke="#4b5160" stroke-width="3"/><rect x="78" y="133" width="244" height="78" rx="4" fill="url(#g)" opacity=".8"/>'
+                : '<rect x="70" y="40" width="260" height="164" rx="12" fill="#0d0f14" stroke="#4b5160" stroke-width="3"/><rect x="80" y="50" width="240" height="144" rx="6" fill="url(#g)"/>' +
+                  '<circle cx="270" cy="95" r="38" fill="#fff" opacity=".12"/><rect x="100" y="150" width="90" height="8" rx="4" fill="#fff" opacity=".85"/><rect x="100" y="166" width="60" height="6" rx="3" fill="#fff" opacity=".5"/>' +
+                  '<path d="M40 214h320l-18 28a10 10 0 0 1-8 4H66a10 10 0 0 1-8-4z" fill="url(#b)" stroke="#4b5160" stroke-width="2"/><rect x="170" y="218" width="60" height="6" rx="3" fill="#0d0f14" opacity=".6"/>';
+            var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + c1 + '"/><stop offset="1" stop-color="' + c2 + '"/></linearGradient><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f4b"/><stop offset="1" stop-color="#1b1e26"/></linearGradient></defs><ellipse cx="200" cy="268" rx="150" ry="14" fill="' + c1 + '" opacity=".25"/>' + screen + '</svg>';
+            return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+        }
+        function enhance() {
+            document.querySelectorAll('#product-grid .product-card').forEach(function (card) {
+                var visual = card.querySelector('.product-visual');
+                if (!visual || visual.querySelector('.product-photo')) return;
+                var flag = card.querySelector('.product-badge-flag');
+                var key = 'flag-thinkpad';
+                Object.keys(palette).forEach(function (k) { if (flag && flag.classList.contains(k)) key = k; });
+                var p = palette[key], t = card.querySelector('.product-title');
+                var img = document.createElement('img');
+                img.className = 'product-photo';
+                img.alt = t ? t.textContent : 'Produk Lenovo';
+                img.loading = 'lazy';
+                img.src = laptopSVG(p[0], p[1], p[2]);
+                visual.appendChild(img);
+            });
+        }
+        function init() {
+            var grid = document.getElementById('product-grid');
+            if (!grid) return;
+            new MutationObserver(enhance).observe(grid, { childList: true });
+            enhance();
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+    })();
+    </script>
+
+</body>
+</html>
